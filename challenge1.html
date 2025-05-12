@@ -96,7 +96,7 @@
       const user = document.getElementById("username").value;
       const pass = document.getElementById("password").value;
 
-      if (user === correctUser && pass === correctPass) {
+      if (user === decoder(correctUser) && pass === decoder(correctPass)) {
         document.getElementById("result").innerHTML =
         `✅ Success! Here is your flag: <strong>flag{z3r0b1te}</strong><br><br>
          📝 <em>Copy this flag into your notepad — you'll need it later!</em><br><br>
