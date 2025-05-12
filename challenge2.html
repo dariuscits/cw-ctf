@@ -101,14 +101,14 @@
   <div id="result"></div>
 
   <script>
-    const _ip = String.fromCharCode(49,57,50,46,49,54,56,46,49,46,49); // 192.168.1.1
-    const _user = String.fromCharCode(97,100,109,105,110); // admin
-    const _pass = String.fromCharCode(114,97,115,112,98,101,114,114,121); // raspberry
-
+    const _ip = String.fromCharCode(49,57,50,46,49,54,56,46,49,46,49); 
+    const _user = String.fromCharCode(99,105,116,115,45,97,100,109,105,110); 
+    const _pass = String.fromCharCode(99,105,116,115,114,117,108,101,115); 
+  
     function checkIP() {
       const ip = document.getElementById("ipInput").value.trim();
       const result = document.getElementById("result");
-
+  
       if (ip === _ip) {
         result.innerHTML = `
           🔐 SSH Command:<br>
@@ -124,8 +124,9 @@
         result.textContent = "❌ Incorrect IP! Try again.";
       }
     }
-
+  
     document.getElementById("ipInput").addEventListener("change", checkIP);
-  </script>  
+  </script>
+   
 </body>
 </html>
