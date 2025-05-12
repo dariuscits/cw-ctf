@@ -12,7 +12,9 @@ function decoder(creds) {
     return credentials;
 }
 
-console.log("Username: ");  
+console.log("Username:" + decoder(correctUser)); 
 
-console.log("Password: ");  
+console.log("Password: " + decoder(correctPass));  
+
+
 
