@@ -97,14 +97,18 @@
       const pass = document.getElementById("password").value;
 
       if (user === decoder(correctUser) && pass === decoder(correctPass)) {
-        document.getElementById("result").innerHTML =
-        `✅ Success! Here is your flag: <strong>flag{z3r0b1te}</strong><br><br>
-         📝 <em>Copy this flag into your notepad — you'll need it later!</em><br><br>
-         <a href="challenge2.html">➡️ Proceed to Challenge 2</a>`;
-      } else {
-        document.getElementById("result").innerText = "❌ Incorrect! Try again.";
-      }
-      return false;
+  const flag = "ZmxhZ3t6M3IwYjF0ZX0="; 
+  const flagOne = atob(flag);
+
+  document.getElementById("result").innerHTML =
+    `✅ Success! Here is your flag: <strong>${flagOne}</strong><br><br>
+     📝 <em>Copy this flag into your notepad — you'll need it later!</em><br><br>
+     <a href="challenge2.html">➡️ Proceed to Challenge 2</a>`;
+} else {
+  document.getElementById("result").innerText = "❌ Incorrect! Try again.";
+}
+return false;
+
     }
   </script>
 </body>
