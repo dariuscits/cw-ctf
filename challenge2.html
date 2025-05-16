@@ -104,13 +104,16 @@
       const result = document.getElementById("result");
   
       if (ip === _ip) {
+        const flag = "ZmxhZ3twajJhcmR1fQ==";  
+        const flagTwo = atob(flag);  
+
         result.innerHTML = `
           🔐 SSH Command:<br>
           <code>ssh ${_user}@${_ip}</code><br>
           Password: <code>${_pass}</code><br><br>
           🖥️ Once connected, run:<br>
           <code>python arduino.py</code><br><br>
-          ✅ Flag found: <strong>flag{pi2ardu}</strong><br>
+          ✅ Flag found: <strong>${flagTwo}</strong><br>
           📝 Copy it — you’ll need it later!<br><br>
           <a class="challenge-link" href="challenge3.html">➡️ Proceed to Challenge 3</a>
         `;
